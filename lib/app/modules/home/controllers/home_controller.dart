@@ -1,8 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-
 import '../../../data/models/blog_post.dart';
 import '../../../services/http_service.dart';
 import '../../../utils/logger.dart';
@@ -46,7 +43,6 @@ class HomeController extends GetxController {
     final suggestions = allBlogPostList.where((post) {
       final blogTitle = post.title!.toLowerCase();
       final input = query.toLowerCase();
-
 
       return blogTitle.contains(input);
     }).toList();

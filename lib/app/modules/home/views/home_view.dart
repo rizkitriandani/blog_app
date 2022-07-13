@@ -67,5 +67,5 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  void search() {}
+
 }
