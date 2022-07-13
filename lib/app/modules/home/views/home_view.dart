@@ -41,13 +41,13 @@ class HomeView extends GetView<HomeController> {
                             Icons.search,
                             color: Color(0xff6F7075),
                           )),
-                        onChanged:(String) => controller.searchPost(controller.searchController.text),
+                        onChanged:(_) => controller.searchPost(controller.searchController.text),
                     ),
                     Expanded(
                       child: ListView.separated(
                         itemCount: controller.blogPostList.length,
                         itemBuilder: (BuildContext context, int index) {
-                          final post = controller.allBlogPostList[index];
+                          final post = controller.blogPostList[index];
 
                           return InkWell(
                             onTap: () {},
